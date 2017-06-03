@@ -1,0 +1,35 @@
+$primary-color: #4b89da;
+$secondary-color: #f5ba45;
+
+html, body {
+	width: 100%;
+	position: relative;
+	background-color: #efefef;
+	color: $primary-color;
+}
+
+a, a:hover, a:focus {
+	color: $secondary-color;
+	text-decoration: none;
+}
+
+.valign-center {
+	display: flex;
+	align-items: center;
+}
+
+.ja-logo {
+	width: 35%;
+	margin: auto;
+}
+
+.bio {
+	background-color: $primary-color;
+	color: #ffffff;
+}
+
+.social-media {
+	a {
+		margin-right: 16px;
+	}
+}
