@@ -4,8 +4,8 @@ $secondary-color: #f5ba45;
 html, body {
 	width: 100%;
 	position: relative;
-	background-color: #efefef;
-	color: $primary-color;
+	background-color: $primary-color;
+	color: #ffffff;
 }
 
 a, a:hover, a:focus {
@@ -18,14 +18,9 @@ a, a:hover, a:focus {
 	align-items: center;
 }
 
-.ja-logo {
-	width: 35%;
-	margin: auto;
-}
-
-.bio {
-	background-color: $primary-color;
-	color: #ffffff;
+.jumbo, .navbar-container {
+	background-color: #efefef;
+	color: $primary-color;
 }
 
 .social-media {
