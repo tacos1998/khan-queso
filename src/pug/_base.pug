@@ -14,14 +14,10 @@ html(lang='en' hreflang='en')
 		link(href='/css/bootstrap-theme.min.css' rel='stylesheet')
 		link(href='/css/website.css' rel='stylesheet')
 	body
-		.container-fluid.navbar-container
-			.navbar
-				.container
-					.row
-						ul.nav.navbar-nav
-							li: a(href='/index.html') Home
-		.container-fluid
-			block content
+		//-
+			nav.navbar.navbar-expand-lg
+				ul.navbar-nav
+					li.nav-item: a.nav-link(href='/index.html') Home
+		block content
 script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
 script(src='/js/bootstrap.min.js')
-script(src='/js/infibit.js')

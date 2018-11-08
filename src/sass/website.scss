@@ -25,10 +25,22 @@ a:focus {
 .navbar-container {
   background-color: #efefef;
   color: $primary-color;
+  text-align: center;
 }
 
 .social-media {
   a {
     margin-right: 16px;
   }
+}
+
+.home-logo {
+	width: 70%;
+	margin: auto;
+}
+
+@media(max-width: 768px) {
+	.home-logo {
+		width: 95%;
+	}
 }

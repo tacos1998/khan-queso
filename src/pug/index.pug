@@ -3,14 +3,16 @@ block vars
 	- var title = 'Khan Queso'
 	- var description = 'A sick band'
 block content
-	.row.jumbo
-		.container
-			.row.text-center
-				img.className#IdName(src="img/logo_pink.png" alt="Image Title")
-				h2 geek-infused indie rock!
-	.row
-		.container
-			.row
-				.col-md-offset-2.col-md-8
-					h2: strong Who are we?
-					h3 The best band on earth! That's who. Our #1 hit is Green Llama. We haven't sold out, yet.
+	.container-fluid.jumbo.pb-3
+		img.mx-auto.d-block.home-logo(src="img/logo_pink.png" alt="Image Title")
+		h2 geek-infused indie rock!
+		h1 
+			a.mr-3(href='https://open.spotify.com/artist/3Lldu2vfsOLDvlJHyO9Jmc'): i.fa.fa-2x.fa-spotify
+			a.mr-3(href='https://www.youtube.com/channel/UCKhL6n0hVPHR-pWEBfrqd4w'): i.fa.fa-2x.fa-youtube
+			a.mr-3(href='https://www.instagram.com/khanqueso/'): i.fa.fa-2x.fa-instagram
+	.container.mt-3
+		.row.mb-3
+			.col-lg-8.mx-auto
+				h2: strong Who are we?
+				h3 The best band on earth! That's who. Our #1 hit is Green Llama. We haven't sold out, yet.	
+		img.mx-auto.d-block.w-75(src="img/band_whole.jpg" alt="Image Title")
