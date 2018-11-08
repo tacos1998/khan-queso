@@ -1,30 +1,34 @@
-$primary-color: #4b89da;
+$primary-color : #0bc5da;
 $secondary-color: #f5ba45;
-
-html, body {
-	width: 100%;
-	position: relative;
-	background-color: $primary-color;
-	color: #ffffff;
+$logo-pink: #f37691;
+html,
+body {
+  width: 100%;
+  position: relative;
+  background-color: $primary-color;
+  color: #ffffff;
 }
 
-a, a:hover, a:focus {
-	color: $secondary-color;
-	text-decoration: none;
+a,
+a:hover,
+a:focus {
+  color: $secondary-color;
+  text-decoration: none;
 }
 
 .valign-center {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.jumbo, .navbar-container {
-	background-color: #efefef;
-	color: $primary-color;
+.jumbo,
+.navbar-container {
+  background-color: #efefef;
+  color: $primary-color;
 }
 
 .social-media {
-	a {
-		margin-right: 16px;
-	}
+  a {
+    margin-right: 16px;
+  }
 }
