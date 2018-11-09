@@ -17,7 +17,9 @@ a:focus {
 }
 
 .valign-center {
+  height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -49,4 +51,10 @@ a:focus {
 	.home-logo {
 		width: 95%;
 	}
+}
+
+@media(min-width: 768px) {
+  .jumbo {
+    height: 100vh;
+  }
 }
