@@ -1,4 +1,4 @@
-$primary-color : #0bc5da;
+$primary-color: #0bc5da;
 $secondary-color: #f5ba45;
 $logo-pink: #f37691;
 html,
@@ -9,6 +9,17 @@ body {
   color: #ffffff;
 }
 
+.jumbo {
+  color: $logo-pink;
+  text-align: center;
+  position: relative;
+}
+
+.jumbo img {
+  vertical-align: top;
+  width: 100%;
+}
+
 a,
 a:hover,
 a:focus {
@@ -16,45 +27,173 @@ a:focus {
   text-decoration: none;
 }
 
-.valign-center {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.jumbo,
-.navbar-container {
-  background-color: #efefef;
-  color: $primary-color;
-  text-align: center;
-}
-
-.jumbo {
-  background-image: url("/img/background.jpg");
-  background-size: 100% auto;
-  color: $logo-pink;
-}
-
-.social-media {
-  a {
-    margin-right: 16px;
+.logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  #home-logo {
+    width: 65%;
+    margin: auto;
   }
 }
 
-.home-logo {
-	width: 70%;
-	margin: auto;
+.info {
+  text-align: center;
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  h1 {
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  i {
+    font-size: 5vw;
+  }
+}
+
+.fm {
+  margin-top: 10px;
+}
+
+.setlist,
+.email {
+  color: $secondary-color;
+}
+
+#producertag {
+  margin-top: 10px;
+}
+
+/* pseudo-element stuff for wavy border */
+
+.members {
+  text-align: center;
+  background: linear-gradient(to bottom, $secondary-color, chocolate);
+  position: relative;
+  padding-bottom: 20px;
+  img {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    padding-bottom: 20px;
+  }
+}
+
+.members::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  height: 10px;
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 10px -5\px, transparent 12px, $primary-color 13px);
+}
+
+.members::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  height: 15px;
+  background-size: 40px 20px;
+  background-image: radial-gradient(circle at 10px 15px, $primary-color 12px, transparent 13px);
+}
+
+/* scrollbar stuff */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $secondary-color;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+}
+
+.roles {
+  display: inline-flex;
+  p {
+    width: 30%;
+  }
+}
+
+/* REEEEEEEEEEsponsiveness */
+
+@media(max-width: 1000px) {
+  .info {
+    bottom: 3%;
+    h1 {
+      margin-left: 13px;
+    }
+  }
+}
+
+@media(max-width: 850px) {
+  .info {
+    bottom: 2%;
+    h1 {
+      margin-left: 13px;
+    }
+  }
+}
+
+@media(max-width: 792px) {
+  .roles {
+    display: block;
+    p {
+      width: auto;
+    }
+  }
 }
 
 @media(max-width: 768px) {
-	.home-logo {
-		width: 95%;
-	}
+  .info {
+    bottom: 1%;
+    h1 {
+      margin-left: 15px;
+    }
+  }
+  .roles {
+    display: block;
+    p {
+      width: auto;
+    }
+  }
 }
 
-@media(min-width: 768px) {
-  .jumbo {
-    height: 100vh;
+@media(max-width: 500px) {
+  .info {
+    bottom: 0;
+  }
+  .roles {
+    display: block;
+    p {
+      width: auto;
+    }
+  }
+}
+
+@media(max-width: 420px) {
+  .info {
+    bottom: -2%;
+    h1 {
+      margin-left: 15px;
+    }
+  }
+  .roles {
+    display: block;
+    p {
+      width: auto;
+    }
   }
 }
