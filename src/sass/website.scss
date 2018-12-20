@@ -88,7 +88,7 @@ a:focus {
   background-repeat: repeat-x;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5\px, transparent 12px, $primary-color 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, $primary-color 13px);
 }
 
 .members::after {
@@ -181,6 +181,12 @@ a:focus {
       width: auto;
     }
   }
+  .members::before {
+    background-image: radial-gradient(circle at 10px -5px, transparent 13px, $primary-color 13px);
+  }
+  .members::after {
+    background-image: radial-gradient(circle at 10px 15px, $primary-color 12px, transparent 12px);
+  }
 }
 
 @media(max-width: 420px) {
@@ -195,5 +201,11 @@ a:focus {
     p {
       width: auto;
     }
+  }
+  .members::before {
+    background-image: radial-gradient(circle at 10px -5px, transparent 13px, $primary-color 13px);
+  }
+  .members::after {
+    background-image: radial-gradient(circle at 10px 15px, $primary-color 12px, transparent 12px);
   }
 }
