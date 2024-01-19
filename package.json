@@ -12,6 +12,9 @@
     "gulp-sass": "^3.1.0",
     "natives": "^1.1.6"
   },
+  "resolutions": {
+    "gift": "^0.10.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
