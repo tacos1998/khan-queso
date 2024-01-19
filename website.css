@@ -1,0 +1,206 @@
+html,
+body {
+  width: 100%;
+  position: relative;
+  background-color: #0bc5da;
+  color: #ffffff;
+}
+
+.jumbo {
+  color: #f37691;
+  text-align: center;
+  position: relative;
+}
+
+.jumbo img {
+  vertical-align: top;
+  width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+  color: #f37691;
+  text-decoration: none;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.logo #home-logo {
+  width: 65%;
+  margin: auto;
+}
+
+.info {
+  text-align: center;
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+}
+.info h1 {
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.info i {
+  font-size: 5vw;
+}
+
+.fm {
+  margin-top: 10px;
+}
+
+.setlist,
+.email {
+  color: #f5ba45;
+}
+
+#producertag {
+  margin-top: 10px;
+}
+
+#patreon {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+/* pseudo-element stuff for wavy border */
+.members {
+  text-align: center;
+  background: linear-gradient(to bottom, #f5ba45, chocolate);
+  position: relative;
+  padding-bottom: 20px;
+}
+.members img {
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  padding-bottom: 20px;
+}
+
+.members::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  height: 10px;
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #0bc5da 13px);
+}
+
+.members::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  height: 15px;
+  background-size: 40px 20px;
+  background-image: radial-gradient(circle at 10px 15px, #0bc5da 12px, transparent 13px);
+}
+
+/* scrollbar stuff */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f5ba45;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
+}
+
+.roles {
+  display: inline-flex;
+}
+.roles p {
+  width: 30%;
+}
+
+/* REEEEEEEEEEsponsiveness */
+@media (max-width: 1000px) {
+  .info {
+    bottom: 3%;
+  }
+  .info h1 {
+    margin-left: 13px;
+  }
+}
+@media (max-width: 850px) {
+  .info {
+    bottom: 2%;
+  }
+  .info h1 {
+    margin-left: 13px;
+  }
+}
+@media (max-width: 792px) {
+  .roles {
+    display: block;
+  }
+  .roles p {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .info {
+    bottom: 1%;
+  }
+  .info h1 {
+    margin-left: 15px;
+  }
+  .roles {
+    display: block;
+  }
+  .roles p {
+    width: auto;
+  }
+}
+@media (max-width: 500px) {
+  .info {
+    bottom: 0;
+  }
+  .roles {
+    display: block;
+  }
+  .roles p {
+    width: auto;
+  }
+  .members::before {
+    background-image: radial-gradient(circle at 10px -5px, transparent 13px, #0bc5da 13px);
+  }
+  .members::after {
+    background-image: radial-gradient(circle at 10px 15px, #0bc5da 12px, transparent 12px);
+  }
+}
+@media (max-width: 420px) {
+  .info {
+    bottom: -2%;
+  }
+  .info h1 {
+    margin-left: 15px;
+  }
+  .roles {
+    display: block;
+  }
+  .roles p {
+    width: auto;
+  }
+  .members::before {
+    background-image: radial-gradient(circle at 10px -5px, transparent 13px, #0bc5da 13px);
+  }
+  .members::after {
+    background-image: radial-gradient(circle at 10px 15px, #0bc5da 12px, transparent 12px);
+  }
+}
