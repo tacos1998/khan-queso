@@ -56,6 +56,6 @@ gulp.task('watch', ['browserSync', 'includes', 'sass', 'pug'], function() {
  * Push build to gh-pages
  */
 gulp.task('deploy', ['default'], function () {
-	return gulp.src("./dist/**/*")
+	return gulp.src("./build/**/*")
 	  .pipe(deploy())
   });
