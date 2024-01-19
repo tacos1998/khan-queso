@@ -3,6 +3,7 @@ const del = require('del');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const browserSync = require('browser-sync');
+const deploy = require('gulp-gh-pages');
 
 gulp.task('clean', function() {
 	return del(['build/']);
@@ -50,3 +51,11 @@ gulp.task('watch', ['browserSync', 'includes', 'sass', 'pug'], function() {
 	gulp.watch('src/pug/**/*.*', ['pug']);
 	gulp.watch('includes/**/*.*', ['includes']);
 });
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', ['default'], function () {
+	return gulp.src("./dist/**/*")
+	  .pipe(deploy())
+  });
